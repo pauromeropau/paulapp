@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('PaulApp'),
@@ -30,9 +31,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {
-          // print('Hola mundo');
-        },
+        onPressed: () {},
       ),
       // floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
