@@ -45,23 +45,35 @@ class _ContadorPageState extends State<ContadorPage> {
         SizedBox(width: 30.0),
         FloatingActionButton(
           child: Icon(Icons.autorenew, color: Colors.black38),
-          onPressed: () {},
+          onPressed: (_reset),
           backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         ),
         Expanded(child: SizedBox()),
         FloatingActionButton(
           child: Icon(Icons.remove, color: Colors.black38),
-          onPressed: () {},
+          onPressed: (_remove),
           backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         ),
         Expanded(child: SizedBox()),
         FloatingActionButton(
           child: Icon(Icons.add, color: Colors.black38),
-          onPressed: () {},
+          onPressed: (_add),
           backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         ),
         SizedBox(width: 5.0),
       ],
     );
+  }
+
+  void _add() {
+    setState(() => _conteo++);
+  }
+
+  void _remove() {
+    setState(() => _conteo--);
+  }
+
+  void _reset() {
+    setState(() => _conteo = 0);
   }
 }
